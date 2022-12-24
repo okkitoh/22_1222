@@ -37,6 +37,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.label4 = new System.Windows.Forms.Label();
+			this.clockView1 = new MarchHare.ClockView();
 			this.drawerContainer.SuspendLayout();
 			this.headerPanel.SuspendLayout();
 			this.homePanel.SuspendLayout();
@@ -48,6 +49,8 @@
 			// 
 			// drawerContainer
 			// 
+			this.drawerContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
 			this.drawerContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
 			this.drawerContainer.Controls.Add(this.headerPanel);
 			this.drawerContainer.Controls.Add(this.homePanel);
@@ -55,10 +58,10 @@
 			this.drawerContainer.Controls.Add(this.panel2);
 			this.drawerContainer.Controls.Add(this.panel3);
 			this.drawerContainer.Controls.Add(this.panel4);
-			this.drawerContainer.Dock = System.Windows.Forms.DockStyle.Left;
 			this.drawerContainer.Location = new System.Drawing.Point(0, 0);
+			this.drawerContainer.Margin = new System.Windows.Forms.Padding(0);
 			this.drawerContainer.Name = "drawerContainer";
-			this.drawerContainer.Size = new System.Drawing.Size(220, 450);
+			this.drawerContainer.Size = new System.Drawing.Size(220, 440);
 			this.drawerContainer.TabIndex = 0;
 			// 
 			// headerPanel
@@ -83,7 +86,6 @@
 			this.headerLabel.TabIndex = 1;
 			this.headerLabel.Text = "March Hare";
 			this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.headerLabel.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// homePanel
 			// 
@@ -107,6 +109,7 @@
 			this.homeLabel.TabIndex = 0;
 			this.homeLabel.Text = "     Home";
 			this.homeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
 			// 
 			// alarmsPanel
 			// 
@@ -204,12 +207,23 @@
 			this.label4.Text = "    About";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
+			// clockView1
+			// 
+			this.clockView1.BackColor = System.Drawing.Color.Transparent;
+			this.clockView1.Location = new System.Drawing.Point(247, 120);
+			this.clockView1.Margin = new System.Windows.Forms.Padding(0);
+			this.clockView1.MinimumSize = new System.Drawing.Size(500, 150);
+			this.clockView1.Name = "clockView1";
+			this.clockView1.Size = new System.Drawing.Size(500, 150);
+			this.clockView1.TabIndex = 1;
+			// 
 			// MainMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(784, 441);
+			this.Controls.Add(this.clockView1);
 			this.Controls.Add(this.drawerContainer);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Name = "MainMenu";
@@ -247,6 +261,7 @@
 		private Label label3;
 		private Panel panel4;
 		private Label label4;
+		private ClockView clockView1;
 	}
 }
 
